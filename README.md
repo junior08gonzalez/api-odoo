@@ -79,3 +79,37 @@
                               
                           }]}
           }
+# Actualizar Pedido Venta
+      {
+              "jsonrpc": "2.0",
+              "method": "call",
+              "params": {
+                          "service": "object", 
+                          "method": "execute", 
+                          "args": ["demo", 2, "3bfb702b135213cc69c11e6310a9fd4035b6e79a", "sale.order", "write",[[198],{
+                              
+                        "partner_id" : 86,
+                        "order_line" : [ 
+                                            [0,0, { 
+                                                    "product_id": 165 , 
+                                                    "product_uom_qty": 12,
+                                                     "price_unit" : 5000
+                                                    },
+                                                    { 
+                                                    "product_id": 166 , 
+                                                    "product_uom_qty": 1,
+                                                     "price_unit" : 52000
+                                                    }
+                                                    ],
+
+                                                     [0,0,
+                                                    { 
+                                                    "product_id": 166 , 
+                                                    "product_uom_qty": 1,
+                                                     "price_unit" : 52000
+                                                    }
+                                                    ] 
+                                        ]
+                        
+                    }] ]}
+    }
