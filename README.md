@@ -9,7 +9,7 @@ jsonrpc
                     "method": "execute", 
                     "args": ["db", uid, "password", "product.template", "search_read", [], []]}
       }
-#Ventas por cliente
+# Ventas por cliente
 {
         "jsonrpc": "2.0",
         "method": "call",
