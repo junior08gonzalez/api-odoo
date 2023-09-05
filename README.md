@@ -86,9 +86,9 @@
               "params": {
                           "service": "object", 
                           "method": "execute", 
-                          "args": ["demo", 2, "3bfb702b135213cc69c11e6310a9fd4035b6e79a", "sale.order", "write",[[198],{
+                          "args": ["db", uid, "password", "sale.order", "write",[[id_pedido],{
                               
-                        "partner_id" : 86,
+                        "partner_id" : id_cliente,
                         "order_line" : [ 
                                             [0,0, { 
                                                     "product_id": 165 , 
