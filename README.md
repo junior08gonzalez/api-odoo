@@ -1,5 +1,5 @@
 # api-odoo
-dominio/jsonrpc
+      tu_dominio/jsonrpc
 # Obtener Productos
       {
         "jsonrpc": "2.0",
