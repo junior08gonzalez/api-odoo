@@ -1,11 +1,13 @@
 # api-odoo
       tu_dominio/jsonrpc
+      
 # Login
          {
               "jsonrpc": "2.0",
               "method": "call",
               "params": {"service": "common", "method": "login", "args": ["db", "user", "password"]}
           }
+          
 # Obtener Productos
       {
         "jsonrpc": "2.0",
