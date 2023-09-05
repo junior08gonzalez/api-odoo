@@ -52,3 +52,22 @@ jsonrpc
                               "default_code" : "lad001"
                           }]}
           }
+# Crear Ventas
+      {
+              "jsonrpc": "2.0",
+              "method": "call",
+              "params": {
+                          "service": "object", 
+                          "method": "execute", 
+                          "args": ["db", uid, "password", "sale.order", "create", {
+                              "partner_id" : 7,
+                              "order_line" : [ 
+                                                  [0,0, { 
+                                                          "product_id": 165 , 
+                                                          "product_uom_qty": 1,
+                                                          "price_unit" : 5000
+                                                          }] 
+                                              ]
+                              
+                          }]}
+          }
