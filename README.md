@@ -94,11 +94,6 @@
                                                     "product_id": 165 , 
                                                     "product_uom_qty": 12,
                                                      "price_unit" : 5000
-                                                    },
-                                                    { 
-                                                    "product_id": 166 , 
-                                                    "product_uom_qty": 1,
-                                                     "price_unit" : 52000
                                                     }
                                                     ],
 
