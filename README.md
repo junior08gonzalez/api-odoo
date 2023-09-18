@@ -85,7 +85,7 @@
               "method": "call",
               "params": {
                           "service": "object", 
-                          "method": "execute", 
+                          "method": "execute_kw", 
                           "args": ["db", uid, "password", "sale.order", "write",[[id_pedido],{
                               
                         "partner_id" : id_cliente,
