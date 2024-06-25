@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
 import requests
-import json
-from odoo import api, fields, models
 from odoo import http
 from odoo.http import route
 # Configuration
@@ -14,7 +12,7 @@ class ExternalAPIController(http.Controller):
     def api_list_invoice(self):
         headers = {
             'Content-Type': 'application/json',
-            'Authorization': 'Api-Key 8EMaNuN1.iTsb9jcUdEyhFdmCa1vyIGSpo9jBXER1'
+            'Authorization': API_KEY
         }
         url = 'https://api.wisphub.io/api/facturas/'
 

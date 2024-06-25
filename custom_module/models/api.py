@@ -1,8 +1,5 @@
 
-import requests
 from odoo import api, fields, models
-from odoo import http
-from odoo.http import Controller, request, route, SessionExpiredException
 # Configuration
 API_KEY = 'Api-Key '+ 'data'
 import requests
@@ -11,9 +8,9 @@ import json
 class Factura(models.Model):
     _inherit = 'account.move'
 
-    response = fields.Text('respuesta', readonly=True)
+    response = fields.Text('Response', readonly=True)
 
-    referencia = fields.Text('Referencia factura Wisphub', readonly=True)
+    reference = fields.Text('Reference', readonly=True)
 
     def list_customer(self):
         headers = {
@@ -33,7 +30,7 @@ class Factura(models.Model):
     def api_list_customer(self):
         headers = {
             'Content-Type': 'application/json',
-            'Authorization': 'Api-Key 8EMaNuN1.iTsb9jcUdEyhFdmCa1vyIGSpo9jBXER1'
+            'Authorization': API_KEY
         }
         url = 'your_url'
         response = requests.request('GET', url, headers=headers)
@@ -83,7 +80,7 @@ class Factura(models.Model):
                 for data_invoice in invoices:
                     if data_invoice['referencia']:
                         self.create({'ref':data_invoice['referencia'],
-                                     'referencia':data_invoice['referencia'],
+                                     'reference':data_invoice['referencia'],
                                      'invoice_date':data_invoice['fecha_emision'],
                                      'partner_id':34156,
                                      'move_type': 'out_invoice'
@@ -94,7 +91,7 @@ class Factura(models.Model):
                             print(type(data_invoice['fecha_emision']))
                 obj = self.env['account.move'].search([('id', '=',28316)])
                 if obj:
-                    obj.write({'referencia':reference_data,'response':"Conexion exitosa, estado "+ str(response.status_code)})
+                    obj.write({'reference':reference_data,'response':"Connection success, Statu "+ str(response.status_code)})
                 return True
 
 
@@ -115,7 +112,7 @@ class Factura(models.Model):
                         print(invoice_data['partner_id'])
 
                 except json.decoder.JSONDecodeError as e:
-                    error_message = f'Error when decoding the JSON: {e}. Responde: {response.text}'
+                    error_message = f'Error when decoding the JSON: {e}. Response: {response.text}'
                     print(error_message)
             else:
                 print("Response doesn't a JSON")
